@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>                      <!-- Konfiguration -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkaufsliste</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <style>
+        body{
+            font-family: "Open Sans", sans-serif;
+        }
+
+        h1{
+            font-weight: 400;           /* Macht die Schrift dünner */
+        }
+
+        button {
+            background-color: rgba(103, 178, 249, 0.89);
+            border: none;
+            color:rgb(255, 255, 255);
+            padding: 4px 10px;          /* Objekt Abstand zum Text */
+            border-radius: 8px;
+            cursor: pointer;            /* Mauszeiger ändert sich innerhalb der Hitbox des Buttons */
+        }
+
+        input {
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            padding: 4px 10px;
+        }
+
+        ::placeholder {                 /* da placeholder ein Attribut ist, kann man den Style durch :: umändern */
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+    </style>
+
+</head>
+<body>                          <!-- Was auf der Webseite angzeigt wird -->
+    <h1>Einkaufsliste</h1>
+    <input id="toDoField" type="text" placeholder="Bitte eingeben...">         <!-- auf ID kann von JavaScript zugegriffen werden -->
+    <button onclick="addToDo()">Speichern</button>                              <!-- Wird Button angeklickt, wird Funktion ausgeführt -->
+    <button onclick="deleteSelected()">Löschen</button>
+
+    <ul id="toDoList">          <!-- unsortierte Liste -->
+        <!-- <li>Äpfel</li>     Listenelement -->   
+    </ul>
+
+<script src="script.js"></script>           <!-- JavaScript einbinden -->
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">            <!-- Internetseite ist auf Deutsch-->
+<head>
+    <meta charset="UTF-8">          <!-- verwendetes Zeichensatz -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- Skalierungsfaktor und Weite der Internetseite -->
+    <title>Mein Fitness Studio</title>             <!-- Name der Internetseite, im Tab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <style>
+        body {  /* jedes Vorkommnis wird bei HTML Tag angesprochen */
+            margin: 0; /* weiße Ränder um das Bild gehören zum Body, margin: Abstandsgröße */
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .background-image { /* einzelne Klasse wird bei Punkt angesprochen, ohne Punkt wird jedes Vorkommnis z.B. jedes Bild bei img{} angesprochen */
+            height: 100vh;  /* 100% des Viewports/Bildschirms */
+            width: 100%;
+            object-fit: cover;  /* Ränder vom Bild werden abgeschnitten, damit keine Verzerrung auftritt */
+            filter: brightness(0.5);
+        }
+
+        .container {
+            position: absolute;     /* frei platzierbar, Container nimmt Größe entsprechend des Inhalts an */     
+            right: 24px;    /* Position des Containers */
+            left: 24px;
+            top: 28px;
+            font-size: 32 px;
+            display: flex;  /* positioniert alles in eine Reihe */
+            align-items: center; /* auf y-Achse zentrieren */
+            justify-content: space-between; /* Positionierung auf x-Achse */
+        }
+
+        .menu-link {
+            color: white;
+            text-decoration: none;  /* Unterstrich entfernen */
+            margin-left: 16px;
+        }
+
+        .menu-link:hover {      /* wenn Mauszeiger innerhalb des Bereichs des Elementes ist */
+            text-decoration: underline;
+        }
+
+        .logo {
+            width: 70px;
+            height: auto;   /*Höhe passt sich automatisch an*/
+        }
+
+        .headline {
+            position: absolute;
+            left: 50px;
+            top: 300px;
+            color: white;
+            font-size: 70px;
+            width: 500px;
+            text-shadow: 5px 5px rgba(207, 197, 197, 0.194); 
+        }
+
+        .yellow {
+            color: #ffdd03;     /* rgb picker → Farben anschauen und Farbcodes per copy/paste einfügen */
+        }
+
+        .description-section {
+            position: absolute;
+            padding: 10px 10px;
+            top: 200px;
+            right: 200px;
+            color: #ffffff;
+            text-shadow: 3px 3px #ffdd034a; 
+            font-size: 20px;
+        }
+
+        .button {
+            background-color: #ffdd032c;
+            padding: 8px 30px;
+            border-radius: 8px;
+            box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.185);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- wurde als absoluter Pfad interpretiert, direkt aus dem Root-Verzeichnis des Servers, 
+     mit dem Punkt davor ./img/... verweist man auf relativen Pfad im gleichen Verzeichnis-->
+    <img class="background-image" src="./img/background.jpg"> 
+
+    <div class="container">     <!-- Reihenfolge von unten nach oben, da ansonsten Elemente überdeckt werden können - zuerst Hintergrund Bild, dann Container -->
+        
+        <img src="./img/logo.png" class="logo">      <!-- Logo wird im selben Container des Impressum gepackt, damit alles auf einer Zeile bleibt -->
+
+        <div>
+            <a class="menu-link" href="">Home</a>
+            <a class="menu-link" href="">Kontakt</a>
+            <a class="menu-link button" href="">Anruf</a> 
+        </div>
+
+        <div class="description-section">
+            Laufen ist keine Option – es sei denn, es geht zur Hantelbank!
+        </div>
+    </div>
+
+    <h1 class="headline"> Das beste <span class="yellow">Fitnessstudio</span> weit und breit.</h1>    <!-- <span> extra Container für Textelemente-->
+
+</body>
+</html>
