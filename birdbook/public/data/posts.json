@@ -1,0 +1,32 @@
+[
+    {
+        "img": "./assets/img/0.jpg",
+        "name": "Jennifer",
+        "time": "Vor 5 Minuten",
+        "text": "Schule ist jenes Exil, in dem der Erwachsene das Kind solange hält, bis es imstande ist, in der Erwachsenenwelt zu leben, ohne zu stören."
+    },
+    {
+        "img": "./assets/img/1.jpg",
+        "name": "Marta",
+        "time": "Vor 7 Minuten",
+        "text": "Erfolg ist die beste Rache."
+    },
+    {
+        "img": "./assets/img/2.jpg",
+        "name": "Lisa",
+        "time": "Vor 12 Minuten",
+        "text": "Mihau."
+    },
+    {
+        "img": "./assets/img/3.jpg",
+        "name": "Jürgen",
+        "time": "Vor 20 Minuten",
+        "text": "Frauen brauchen sich nicht zu emanzipieren. So gut wie Männer werden sie eh nicht."
+    },
+    {
+        "img": "./assets/img/4.jpg",
+        "name": "Tim",
+        "time": "Vor 30 Minuten",
+        "text": "Für Fortnite!"
+    }
+]

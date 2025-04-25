@@ -1,0 +1,33 @@
+.card {
+    min-height: 120px;
+    background-color: rgb(240, 245, 240);
+    border-radius: 12px;                        /* Intensität der Eckenabrundungen */
+    margin-bottom: 16px;                        /* Abstand nach unten */
+    display: flex;                              /* flexibles Layout, Unterelemente können angepasst werden */
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.card-left {
+    background-color: rgba(0, 128, 0, 0.174);
+    width: 20%;
+    /* min-height: 100px; */
+    min-height: 100%;                           /* nimmt 100% Höhe ein in Relation zum übergeordneten Element card */
+    display: flex;
+    justify-content: center;                    /* Position auf der x-Achse */
+    padding-top: 24px;                              /* wie weit nach oben eingerückt */
+    padding-bottom: 8px;
+}
+
+.card-right {
+    background-color: rgba(255, 0, 0, 0.176);
+    width: 80%;
+    min-height: 100%;
+    color: rgb(40, 11, 232);                    /* überschreibt Farbe aus style, bspw. Schriftzug */
+}
+
+.card-time {
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.639);
+}

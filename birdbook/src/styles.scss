@@ -1,0 +1,15 @@
+body {                                          /* Aussehen für gesamte App ändern */
+    background-color: rgb(8,14,36);
+    color: rgba(0, 0, 0, 0.756);            /* färbt alle Container schwarz, die keine Farbe haben, z.B. Schriftzüge */
+    font-family: "Open Sans", sans-serif;       /* Font wurde über Link in der Index-Datei eingebunden, ansonsten effizienter herunterzuladen */
+}
+
+.profile-image {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+}
+
+
+
