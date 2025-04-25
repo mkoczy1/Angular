@@ -8,77 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <style>
-        body {  /* jedes Vorkommnis wird bei HTML Tag angesprochen */
-            margin: 0; /* weiße Ränder um das Bild gehören zum Body, margin: Abstandsgröße */
-            font-family: "Open Sans", sans-serif;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        .background-image { /* einzelne Klasse wird bei Punkt angesprochen, ohne Punkt wird jedes Vorkommnis z.B. jedes Bild bei img{} angesprochen */
-            height: 100vh;  /* 100% des Viewports/Bildschirms */
-            width: 100%;
-            object-fit: cover;  /* Ränder vom Bild werden abgeschnitten, damit keine Verzerrung auftritt */
-            filter: brightness(0.5);
-        }
-
-        .container {
-            position: absolute;     /* frei platzierbar, Container nimmt Größe entsprechend des Inhalts an */     
-            right: 24px;    /* Position des Containers */
-            left: 24px;
-            top: 28px;
-            font-size: 32 px;
-            display: flex;  /* positioniert alles in eine Reihe */
-            align-items: center; /* auf y-Achse zentrieren */
-            justify-content: space-between; /* Positionierung auf x-Achse */
-        }
-
-        .menu-link {
-            color: white;
-            text-decoration: none;  /* Unterstrich entfernen */
-            margin-left: 16px;
-        }
-
-        .menu-link:hover {      /* wenn Mauszeiger innerhalb des Bereichs des Elementes ist */
-            text-decoration: underline;
-        }
-
-        .logo {
-            width: 70px;
-            height: auto;   /*Höhe passt sich automatisch an*/
-        }
-
-        .headline {
-            position: absolute;
-            left: 50px;
-            top: 300px;
-            color: white;
-            font-size: 70px;
-            width: 500px;
-            text-shadow: 5px 5px rgba(207, 197, 197, 0.194); 
-        }
-
-        .yellow {
-            color: #ffdd03;     /* rgb picker → Farben anschauen und Farbcodes per copy/paste einfügen */
-        }
-
-        .description-section {
-            position: absolute;
-            padding: 10px 10px;
-            top: 200px;
-            right: 200px;
-            color: #ffffff;
-            text-shadow: 3px 3px #ffdd034a; 
-            font-size: 20px;
-        }
-
-        .button {
-            background-color: #ffdd032c;
-            padding: 8px 30px;
-            border-radius: 8px;
-            box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.185);
-        }
-
-    </style>
 </head>
 <body>
     <!-- wurde als absoluter Pfad interpretiert, direkt aus dem Root-Verzeichnis des Servers, 
@@ -89,18 +20,47 @@
         
         <img src="./img/logo.png" class="logo">      <!-- Logo wird im selben Container des Impressum gepackt, damit alles auf einer Zeile bleibt -->
 
-        <div>
+        <div class="navigation">
             <a class="menu-link" href="">Home</a>
             <a class="menu-link" href="">Kontakt</a>
             <a class="menu-link button" href="">Anruf</a> 
         </div>
-
-        <div class="description-section">
-            Laufen ist keine Option – es sei denn, es geht zur Hantelbank!
-        </div>
     </div>
 
     <h1 class="headline"> Das beste <span class="yellow">Fitnessstudio</span> weit und breit.</h1>    <!-- <span> extra Container für Textelemente-->
+    
+
+    <div class="description-section">
+        <div class ="half-width">
+            Laufen ist keine Option – es sei denn, es geht zur Hantelbank!
+        </div>
+        <div class="karte">
+            <h2> Anfahrt </h2>
+            <!-- Breite und Höhe beim iframe löschen -> in css konfigurierbar -->
+            <iframe class ="half-width" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24012.999315484733!2d8.23274103928251!3d50.00886588452545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd96e40a109489%3A0xfb5ad3072e81f0d6!2sIntercityHotel%20Mainz!5e0!3m2!1sde!2sde!4v1745581497921!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div>
+
+    <h2 class="video-titel"> Video </h2>
+
+<!-- class youtube anstatt Höhe und Breite angeben, s.o. -->
+    <div class="video">
+        <iframe 
+            class="youtube"     
+            src="https://www.youtube.com/embed/0YqaDSLZLgU?si=u8rrfaRHuxSl_b5f" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen
+        ></iframe>
+
+        <div class="quarter-width">
+            <strong>Wie starte ich am besten mit dem Training? Welcher Trainingssplit passt zu mir?</strong>
+
+            <p>Der Einstieg ins Training kann herausfordernd erscheinen, aber mit der richtigen Herangehensweise wird es schnell zur Routine. Zunächst ist es wichtig, mit einem Trainingsplan zu beginnen, der zu deinem Fitnesslevel und deinen Zielen passt. Als Anfänger ist ein Ganzkörpertraining ideal, da es alle Muskelgruppen gleichmäßig anspricht und dir hilft, eine solide Basis aufzubauen.</p>
+    </div>
 
 </body>
 </html>

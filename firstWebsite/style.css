@@ -1,0 +1,133 @@
+body {  /* jedes Vorkommnis wird bei HTML Tag angesprochen */
+    margin: 0; /* weiße Ränder um das Bild gehören zum Body, margin: Abstandsgröße */
+    font-family: "Open Sans", sans-serif;
+}
+
+.background-image { /* einzelne Klasse wird bei Punkt angesprochen, ohne Punkt wird jedes Vorkommnis z.B. jedes Bild bei img{} angesprochen */
+    height: 100vh;  /* 100% des Viewports/Bildschirms */
+    width: 100%;
+    object-fit: cover;  /* Ränder vom Bild werden abgeschnitten, damit keine Verzerrung auftritt */
+    filter: brightness(0.5);
+}
+
+.container {
+    position: absolute;     /* frei platzierbar, Container nimmt Größe entsprechend des Inhalts an */     
+    right: 24px;    /* Position des Containers */
+    left: 24px;
+    top: 28px;
+    font-size: 32 px;
+    display: flex;  /* positioniert alles in eine Reihe */
+    align-items: center; /* auf y-Achse zentrieren */
+    justify-content: space-between; /* Positionierung auf x-Achse */
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;  /* Unterstrich entfernen */
+    margin-left: 16px;
+}
+
+.menu-link:hover {      /* wenn Mauszeiger innerhalb des Bereichs des Elementes ist */
+    text-decoration: underline;
+}
+
+.logo {
+    width: 70px;
+    height: auto;   /*Höhe passt sich automatisch an*/
+}
+
+.headline {
+    position: absolute;
+    left: 50px;
+    top: 300px;
+    color: white;
+    font-size: 70px;
+    width: 500px;
+    text-shadow: 5px 5px rgba(207, 197, 197, 0.194); 
+}
+
+.yellow {
+    color: #ffdd03;     /* rgb picker → Farben anschauen und Farbcodes per copy/paste einfügen */
+}
+
+.description-section {
+    position: absolute;
+    padding: 10px 10px;
+    top: 200px;
+    right: 200px;
+    color: #ffffff;
+    text-shadow: 3px 3px #ffdd034a; 
+    font-size: 20px;
+    margin-top: -50px;      /* schiebt 50px nach oben */
+
+    display: flex;      /* ordnet alle Elemente nebeneinander an */
+    gap: 400px;
+}
+
+.button {
+    background-color: #ffdd032c;
+    padding: 8px 30px;
+    border-radius: 8px;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.185);
+}
+
+.half-width {
+    width: 50%;
+}
+
+h2 {
+    font-size: 20px
+}
+
+.karte {
+    width: 600px;
+    height: 400px;
+    margin-right: -300px;
+    margin-top: 10px;
+}
+
+.video-titel {
+    padding-left: 100px;
+}
+
+.video {
+    padding-left: 100px;
+    display: flex;      /* ordnet alle Elemente nebeneinander an */
+    gap: 50px;
+}
+
+.quarter-width {
+    width: 25%;
+}
+
+ /* Objekte, wie Videos, dynamisch anpassen, wenn Viewport kleiner wird */
+.youtube {
+    width: calc(100vw * 0.4);
+    height: calc(56.25vw * 0.4);
+}
+
+/* Objekte werden, wenn Viewport zu klein wird, untereinander angeordnet */
+@media (max-width: 700px) {
+    .description-section{
+        flex-direction: column;
+        align-items: center;
+        height: unset;      /* feste Höhe entfernen, damit Objekte nicht ineinander ragen */
+    }
+
+    .half-width {
+        width: unset;
+    }
+
+    /* 
+    .video {
+        width: unset;
+        display: flex;
+        justify-content: center;
+    }
+    */
+
+    /* wenn Viewport zu klein wird, Objekte werden ausgeblendet */
+    .navigation {
+        display: none;
+    }
+}
